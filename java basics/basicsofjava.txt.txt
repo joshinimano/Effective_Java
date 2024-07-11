@@ -1,0 +1,144 @@
+Basics of Java
+
+Object-Oriented: 
+  Java is based on the principles of Object-Oriented Programming (OOP), which include concepts like classes, objects, inheritance, polymorphism, encapsulation, and abstraction.
+
+Platform-Independent: 
+  Java code is compiled into bytecode, which can run on any device with a Java Virtual Machine (JVM), making Java platform-independent.
+
+Syntax:
+  Java syntax is similar to C++, but it is simpler and avoids certain features of C++ like pointers and multiple inheritance.
+
+java
+Copy code
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+Data Types: Java supports various data types including:
+
+Primitive types: 
+  int, float, double, char, boolean, byte, short, long
+Non-primitive types: 
+  Strings, Arrays, Classes, Interfaces
+Control Structures: 
+  Java provides standard control structures:
+
+Conditional statements: 
+  if, else if, else, switch
+Loops: 
+  for, while, do-while
+Classes and Objects:
+  Java uses classes as blueprints for creating objects.
+
+java
+Copy code
+class Dog {
+    String name;
+    int age;
+
+    void bark() {
+        System.out.println("Woof!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        myDog.name = "Buddy";
+        myDog.age = 3;
+        myDog.bark();
+    }
+}
+Inheritance:
+  Allows a new class to inherit the properties and methods of an existing class.
+
+java
+Copy code
+class Animal {
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Woof!");
+    }
+}
+Polymorphism:
+  Allows methods to do different things based on the object it is acting upon.
+
+java
+Copy code
+class Animal {
+    void makeSound() {
+        System.out.println("Some sound");
+    }
+}
+
+class Dog extends Animal {
+    void makeSound() {
+        System.out.println("Woof!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myDog = new Dog();
+        myDog.makeSound(); // Outputs "Woof!"
+    }
+}
+Encapsulation:
+  Bundling the data (variables) and code (methods) together as a single unit.
+
+java
+Copy code
+class Person {
+    private String name;
+    private int age;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
+Abstraction:
+  Hiding complex implementation details and showing only the necessary features.
+
+java
+Copy code
+abstract class Animal {
+    abstract void makeSound();
+}
+
+class Dog extends Animal {
+    void makeSound() {
+        System.out.println("Woof!");
+    }
+}
+Exception Handling: 
+  Managing errors using try-catch blocks.
+
+java
+Copy code
+try {
+    int divideByZero = 5 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("ArithmeticException: Division by zero.");
+}
+Java Standard Library:
+  Java comes with a rich standard library (API) that provides many ready-made functionalities, such as data structures (Collections), input/output, networking, and more.
+
